@@ -1,113 +1,342 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="flex min-h-screen flex-col items-center justify-between  bg-white">
+      {/* hero */}
+      <div id="hero" class="w-full bg-[#011E11]">
+        <div className="container flex-col min-h-screen mx-auto flex xl:px-5 py-10">
+          <div className="nav capitalize py-5 text-[#12FF46] font-bold px-5 md:px-0">
+            aesari - diaspora property alliance
+          </div>
+          <div className="flex-1 flex flex-col md:flex-row">
+            <div
+              id="left"
+              className="flex-1 flex flex-col justify-center gap-y-5 md:items-start items-center md:text-left text-center"
+            >
+              <h1 className="text-6xl text-white font-black">
+                Combat <br />
+                Property Fraud
+              </h1>
+              <div>
+                <input
+                  type="button"
+                  className="py-2 px-5 bg-[#FAFF12] rounded-3xl uppercase"
+                  value="Register your property"
+                />
+              </div>
+            </div>
+            <div
+              id="right"
+              className="flex-1 flex flex-col justify-center md:px-0 px-5 md:pb-0 py-5"
+            >
+              <Image
+                src={"/placeholder-image.jpg"}
+                alt
+                width="500"
+                height="300"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* end hero */}
+
+      {/* first section */}
+
+      <div id="first" class="w-full bg-[#FAFF12]">
+        <div className="container min-h-screen mx-auto flex flex-col md:flex-row  py-10">
+          <div
+            id="left"
+            className="flex-1 flex flex-col justify-center md:px-0 p-5"
           >
-            By{' '}
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src={"/placeholder-image.jpg"}
+              alt
+              width="500"
+              height="300"
             />
-          </a>
+          </div>
+          <div
+            id="right"
+            className="flex-1 px-5 md:pl-10 flex flex-col justify-center gap-y-5 md:items-start items-center md:text-left text-center"
+          >
+            <h1 className="text-4xl font-black">
+              Protect your land/house from property fraud
+            </h1>
+            <p>
+              Property fraud is on the increase in Uganda. Fraudsters, conniving
+              with government officials, can steal land titles, sell or mortgage
+              property belonging to those in the diaspora without their
+              knowledge. Your property is at risk if:
+            </p>
+            <ul>
+              <li>You live abroad</li>
+              <li>Your property is empty or undeveloped</li>
+              <li>The property is rented out</li>
+              <li>The property is mortgage free</li>
+              <li>The property is not monitored by AESARI</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {/* end secondsection */}
+
+      {/* what aesari can do */}
+      <div id="third" class="w-full bg-[#011E11]">
+        <div className="container justify-center min-h-screen mx-auto flex flex-col gap-y-10 py-10">
+          <h1 className="text-4xl text-center text-[#12FF46] font-black">
+            What Aesari Can Do For You
+          </h1>
+
+          <div
+            id="columns"
+            className="w-full flex flex-col md:flex-row justify-between gap-y-10 gap-x-20 px-10 "
+          >
+            <div className="bg-[#FAFF12]" id="card">
+              <Image
+                src={"/placeholder-image.jpg"}
+                alt
+                width="500"
+                height="150"
+                className="aspect-auto"
+              />
+              <div className="px-5 py-10 text-center">
+                <h3 className="font-bold whitespace-break-spaces">
+                  Property Monitoring
+                </h3>
+                <p className="">
+                  For all those who feel their property is at risk of fraud
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-[#FAFF12]" id="card">
+              <Image
+                src={"/placeholder-image.jpg"}
+                alt
+                width="500"
+                height="150"
+                className="aspect-auto"
+              />
+              <div className="px-5 py-10 text-center">
+                <h3 className="font-bold whitespace-break-spaces">
+                  Fraud Alert Services
+                </h3>
+                <p className="">
+                  Receive monthly alerts for any registered property
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-[#FAFF12]" id="card">
+              <Image
+                src={"/placeholder-image.jpg"}
+                alt
+                width="500"
+                height="150"
+                className="aspect-auto"
+              />
+              <div className="px-5 py-10 text-center">
+                <h3 className="font-bold whitespace-break-spaces">
+                  Optional Legal Cover Insurance
+                </h3>
+                <p className="">
+                  Get up to UGx 10million in legal insurance cover
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* end do */}
+
+      {/* why aesari */}
+      <div id="third" class="w-full bg-white">
+        <div className="container justify-center min-h-screen mx-auto flex flex-col gap-y-10 py-10">
+          <h1 className="text-4xl text-center font-black">Why Aesari</h1>
+
+          <div
+            id="columns"
+            className="w-full flex flex-col md:flex-row justify-between gap-y-10 gap-x-20 px-10 "
+          >
+            <div className="flex flex-col items-center" id="card">
+              <Image
+                src={"/placeholder-image.jpg"}
+                alt
+                width="200"
+                height="150"
+                className="aspect-auto"
+              />
+              <div className="px-5 py-10 text-center">
+                <h3 className="font-bold whitespace-break-spaces">
+                  Comprehensive
+                </h3>
+                <p className="">Support your header with a short one liner.</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center" id="card">
+              <Image
+                src={"/placeholder-image.jpg"}
+                alt
+                width="200"
+                height="150"
+                className="aspect-auto"
+              />
+              <div className="px-5 py-10 text-center">
+                <h3 className="font-bold whitespace-break-spaces">
+                  Easy to set up
+                </h3>
+                <p className="">Support your header with a short one liner.</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center" id="card">
+              <Image
+                src={"/placeholder-image.jpg"}
+                alt
+                width="200"
+                height="150"
+                className="aspect-auto"
+              />
+              <div className="px-5 py-10 text-center">
+                <h3 className="font-bold whitespace-break-spaces">
+                  Affordable
+                </h3>
+                <p className="">Support your header with a short one liner.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* end why */}
+
+      {/* explanation */}
+      <div id="third" class="w-full bg-[#011E11]">
+        <div className="container justify-center min-h-screen mx-auto flex flex-col gap-y-10 py-10">
+          <h1 className="text-4xl text-[#12FF46] text-center font-black">
+            Why Aesari
+          </h1>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      {/* end explanation */}
+
+      {/* testimonials */}
+      <div id="testimonial" class="w-full bg-[#FF5757]">
+        <div className="container flex-col min-h-screen mx-auto flex xl:px-5 py-10">
+          <div className="text-4xl capitalize py-10 text-black font-black px-5 md:px-0">
+            testimonials
+          </div>
+          <div className="flex-1 flex flex-col px-5">
+            <div
+              id="row"
+              className="flex-1 gap-x-5 md:gap-x-16 flex flex-row justify-center gap-y-5 md:items-start items-center md:text-left text-left"
+            >
+              <h1 className="font-bold md:text-2xl whitespace-nowrap">
+                Dr. Catherine B <br />
+                London, UK
+              </h1>
+              <p className="">
+                Thanks to this alert service, I was able to prevent a fraudulent
+                property transfer and protect my investment in Entebbe. Highly
+                recommend!
+              </p>
+            </div>
+
+            <div
+              id="row"
+              className="flex-1 gap-x-5 md:gap-x-16 flex flex-row justify-center gap-y-5 md:items-start items-center md:text-left text-left"
+            >
+              <h1 className="font-bold md:text-2xl whitespace-nowrap">
+                Mona T<br /> Munich, Germany
+              </h1>
+              <p className="">
+                Having been a victim of a title scam in 2018, I was thrilled to
+                find a service that could help me. The alerts are quick and easy
+                to understand, and I feel much more secure knowing that my land
+                is being monitored.
+              </p>
+            </div>
+
+            <div
+              id="row"
+              className="flex-1 gap-x-5 md:gap-x-16 flex flex-row justify-center gap-y-5 md:items-start items-center md:text-left text-left"
+            >
+              <h1 className="font-bold md:text-2xl whitespace-nowrap">
+                John N<br /> Dallas, USA
+              </h1>
+              <p className="">
+                I've been using this service for a few months now, and I'm
+                impressed with the level of coverage it provides. I feel much
+                more informed about potential risks to my rentals in Seeta, and
+                I appreciate the peace of mind it gives me.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+      {/* end testimonial */}
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      {/* footer */}
+      <div id="hero" class="w-full bg-[#011E11]">
+        <div className="container flex-col min-h-screen mx-auto flex xl:px-5 py-10">
+          <div className="flex-1 flex flex-col md:flex-row">
+            <div
+              id="left"
+              className="flex-1 flex flex-col justify-center gap-y-5 md:items-start items-center md:text-left text-center"
+            >
+              <h1 className="text-6xl text-[#12FF46] font-black">
+                Do not miss out
+              </h1>
+              <p className="text-[#12FF46]">
+                Reach out for an exploratory conversation.
+              </p>
+              <div>
+                <input
+                  type="button"
+                  className="py-2 px-5 bg-[#FAFF12] rounded-3xl uppercase"
+                  value="Register your property"
+                />
+              </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+              <div
+                id="contact"
+                className="flex flex-col gap-y-5 text-white pt-10"
+              >
+                <div>
+                  <h1 className="text-[#12FF46]">PHONE</h1>
+                  <span>
+                    +44 7541 55 31 94 <br />
+                    +256 772 489 358
+                  </span>
+                </div>
+                <div>
+                  <h1 className="text-[#12FF46]">EMAIL</h1>
+                  <span>info@aesari.com</span>
+                </div>
+                <div>
+                  <h1 className="text-[#12FF46]">SOCIAL</h1>
+                  <span>info@aesari.com</span>
+                </div>
+              </div>
+            </div>
+            <div
+              id="right"
+              className="flex-1 flex flex-col justify-center md:px-0 px-5 md:pb-0 py-5"
+            >
+              <Image
+                src={"/placeholder-image.jpg"}
+                alt
+                width="500"
+                height="300"
+              />
+            </div>
+          </div>
+        </div>
       </div>
+      {/* end footer */}
     </main>
-  )
+  );
 }
